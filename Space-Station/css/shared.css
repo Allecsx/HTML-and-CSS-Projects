@@ -147,7 +147,8 @@ section {
     HOME SECTION STYLES
 ........................*/
 
-#home {
+#home, 
+#gallery {
     background: url(../images/planets.jpg) no-repeat 50% 50%;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -158,6 +159,7 @@ section {
     display: block;
     height: auto;
     padding-top: 350px; /*This is spacer before the Main title Logo */
-    padding-bottom: 500px; /* This is spacer after the Main title Logo */
+    padding-bottom: 400px; /* This is spacer after the Main title Logo */
     color: #fff;
+
 }
