@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./js/one_page_website.js" defer></script>
 
 		<title> Studio B2B </title> 
 	</head>
@@ -19,7 +19,6 @@ text-align: center;
 
 
 <!-- NAV -->
-
 	<div>
 		<div>
 			<div style= "text-align: center;">
@@ -43,62 +42,71 @@ text-align: center;
 			</div>
 		</div>
 	</div>
-	
 <!-- END HOME -->
 
-<!-- Look around -->
-<section>
-	<div id="gallery">
-		<h1>Look Around</h1>
-		
-		<div style="display:inline-block";>
-		
-				<!-- PHOTO CONTAINER 1 -->
-		<div style="float:left;margin-left:10px">
-			<div>
-				<div>
-					<div>
-						<img src="lookaround\studio1.png" alt="Studio 1" width="550" height="350">
-							<div class="bottom-right"> 1st Studio to rent</div>
-							<div style="display:inline-block";></div>
-					</div>
-				</div>
-			</div>
-		</div>
-			<!-- END PHOTO - CONTAINER 1 -->
-				
-			<!-- PHOTO CONTAINER 2 -->
-		<div style="float:left;margin-left:100px">
-			<div>
-				<div>
-					<div>
-						<img src="lookaround\studio2.png" alt="Studio 2" width="550" height="350">
-							<div class="bottom-right"> 2nd Studio to rent</div>
-							<div style="display:inline-block";></div>
-					</div>
-				</div>
-			</div>
-		</div>
-			<!-- END PHOTO - CONTAINER 2 -->
-				
-			<!-- PHOTO CONTAINER 3 -->
-		<div style="float:left;margin-left:100px">
-			<div>
-				<div>
-					<div>
-						<img src="lookaround\studio3.png" alt="Studio 3" width="550" height="350">
-						<div class="bottom-right"> 3rd Studio to rent</div>
-						<div style="display:inline-block";></div>
-					</div>
-				</div>
-			</div>
-		</div>
-			<!-- END PHOTO - CONTAINER 3 -->
-				
-		</div>
+<!-- Images used to open the lightbox -->
+<div class="row">
+	<div class="column">
+	  <img src="./lookaround/thumbnail/studio1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+	  <div class="bottom-right"> 1st Studio to rent</div>
 	</div>
-</section>
-<!--END Look around -->
+
+	<div class="column">
+	  <img src="./lookaround/thumbnail/studio2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+	  <div class="bottom-right"> 2nd Studio to rent</div>
+	</div>
+
+	<div class="column">
+	  <img src="./lookaround/thumbnail/studio3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+	  <div class="bottom-right"> 3rd Studio to rent</div>
+	</div>
+
+</div>
+  
+  <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 3</div>
+		<img src="./lookaround/thumbnail/studio1.jpg" style="width: 94%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 3</div>
+		<img src="./lookaround/thumbnail/studio2.jpg" style="width:94%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 3</div>
+		<img src="./lookaround/thumbnail/studio3.jpg" style="width:94%">
+	  </div>
+  
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="demo" src="./lookaround/thumbnail/studio1.jpg" onclick="currentSlide(1)" alt="Studio1">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./lookaround/thumbnail/studio2.jpg" onclick="currentSlide(2)" alt="Studio2">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./lookaround/thumbnail/studio3.jpg" onclick="currentSlide(3)" alt="Studio3">
+	  </div>
+  
+	</div>
+</div>
 
 <!-- BOOK -->
 <section>
@@ -134,7 +142,6 @@ text-align: center;
 
 <!-- FOOTER -->
 	<div>
-	
 		<footer>
 			<body>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/ePXv8EI0D8o?si=HtKBcm-CYiXzVg4j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
